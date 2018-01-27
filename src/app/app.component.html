@@ -1,0 +1,23 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+  <img width="300" alt="Angular Logo" src="{{logo}}">
+</div>
+<h2>Donation</h2>
+<label for="firstname">Name: </label>
+<input type="text" name="name" id="firstname" required>
+<br>
+<br>
+<label for="services">Which Service do you want to Donate?</label>
+<select name="services" id="services">
+  <option *ngFor="let serv of services" value="serv">{{serv}}</option>
+</select>
+<br>
+<br>
+<button *ngFor="let donation of donations">{{donation}} {{denomination}}</button>
+<input type="text" placeholder="Other amount in {{denomination}}">
+<br>
+<br>
+<button> Submit </button>
